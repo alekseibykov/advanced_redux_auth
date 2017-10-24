@@ -1,6 +1,6 @@
 import axios from 'axios';
 import history from '../history';
-import { AUTH_USER } from './types';
+import { AUTH_USER, AUTH_ERROR } from './types';
 
 const ROOT_URL = 'http://localhost:3090';
 
@@ -15,8 +15,15 @@ export function signinUser({ email, password }) {
         history.push('/feature');
       })
       .catch(() => {
-
+        dispatch(authError('Bad Login Info'));
       })
 
+  };
+}
+
+export function authError(error) {
+  return {
+    type: AUTH_ERROR,
+    payload: error
   };
 }
