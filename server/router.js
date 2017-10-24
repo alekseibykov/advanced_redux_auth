@@ -7,7 +7,7 @@ const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports =  function(app) {
   app.get('/', requireAuth, function(req, res) {
-    res.send(['qwe', 'asd']);
+    res.send({ message: 'Secret code is ABC123'});
   });
 
   app.post('/signin', requireSignin, Authentication.signin);
