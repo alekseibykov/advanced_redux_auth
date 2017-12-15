@@ -30,6 +30,7 @@
     "axios": "^0.17.0",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "5.0.4",
